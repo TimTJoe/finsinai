@@ -1,0 +1,6 @@
+[
+  { "area": "Personnel Expense", "amount": 4500 },
+  { "area": "Stationary & Printing", "amount": 2500 },
+  { "area": "Maintenance", "amount": 1500 },
+  { "area": "Supplies", "amount": 2700 }
+]

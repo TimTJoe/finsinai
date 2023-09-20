@@ -1,0 +1,6 @@
+[
+  { "title": "Tithes", "amount": 5000 },
+  { "title": "Budget Support", "amount": 1500 },
+  { "title": "Offering", "amount": 1000 },
+  { "title": "Other", "amount": 300 }
+]

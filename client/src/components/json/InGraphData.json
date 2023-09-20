@@ -1,0 +1,26 @@
+[
+  {
+    "month": "January",
+    "items": [
+      { "name": "Church Offering", "value": 40 },
+      { "name": "Thanksgiving Offering", "value": 30 },
+      { "name": "New Year Envelopes", "value": 20 }
+    ]
+  },
+  {
+    "month": "February",
+    "items": [
+      { "name": "Church Harvest", "value": 30 },
+      { "name": "Board of Laity", "value": 40 },
+      { "name": "Church Anniversary", "value": 25 }
+    ]
+  },
+  {
+    "month": "March",
+    "items": [
+      { "name": "Men Unit", "value": 35 },
+      { "name": "Women Organization", "value": 20 },
+      { "name": "User Board", "value": 45 }
+    ]
+  }
+]
