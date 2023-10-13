@@ -5,7 +5,7 @@ import SignupView from "./views/Signup.view";
 import AccountView from "./views/account.view";
 import Slide from "@components/animations/Slide";
 
-export const Account = () => {
+const Account = () => {
   let { params } = useParams();
   let [viewType, setViewType] = useState("account");
 
