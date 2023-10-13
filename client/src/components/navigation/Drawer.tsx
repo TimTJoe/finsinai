@@ -13,7 +13,7 @@ import {
 import DrawerItems from "./drawer.items";
 
 interface IDrawer extends DrawerProps {
-  openDrawer: () => void;
+  openDrawer?: () => void;
   open: boolean;
 }
 

@@ -69,9 +69,6 @@ const PieChart: React.FC<PieChartProps> = ({ data }) => {
     }
   }, [data]);
 
-  const getTotalAmount = (data: { title: string; amount: number }[]) => {
-    return data.reduce((total, expense) => total + expense.amount, 0);
-  };
 
   return <div ref={chartRef} style={{ width: "100%", height: "400px" }} />;
 };

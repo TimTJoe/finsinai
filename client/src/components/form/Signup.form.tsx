@@ -44,13 +44,13 @@ export const SignupForm = () => {
   } = useForm();
 
   //HANDLERS
-  const handleErrors = (errors: any) => {};
+  const handleErrors = (errors: any) => {console.error(errors)};
 
   function handleChange(e: any) {
     setValues({ ...values, [e.target.name]: wodify(e) });
   }
 
-  async function handleSave(e: any) {
+  async function handleSave() {
     if (await userExist(values.email)) {
       setError("email", {
         type: "manual",
@@ -71,6 +71,7 @@ export const SignupForm = () => {
             setTimeout(() => {
               goto("/account/signin");
             }, 1000);
+            console.log(data)
           })
           .catch((error: string | undefined) => {
             throw new Error(error);
@@ -89,7 +90,7 @@ export const SignupForm = () => {
   return (
     <FormBox
       component={"form"}
-      method="post"
+      // method="post"
       onSubmit={handleSubmit(handleSave, handleErrors)}
     >
       {loading && <LinearProgress />}
@@ -106,7 +107,7 @@ export const SignupForm = () => {
           InputLabelProps={{ shrink: true }}
           {...register("fullname", Pattern.fullname)}
           error={Boolean(errors.fullname)}
-          helperText={errors.fullname?.message}
+          helperText={(errors.fullname as any)?.message}
           onChange={handleChange}
         />
         <InputField
@@ -117,7 +118,7 @@ export const SignupForm = () => {
           InputLabelProps={{ shrink: true }}
           {...register("email", Pattern.email)}
           error={Boolean(errors.email)}
-          helperText={errors.email?.message}
+          helperText={(errors.email as any)?.message}
           onChange={handleChange}
         />
         <InputField
@@ -128,7 +129,7 @@ export const SignupForm = () => {
           InputLabelProps={{ shrink: true }}
           {...register("password", Pattern.password)}
           error={Boolean(errors.password)}
-          helperText={errors.password?.message}
+          helperText={(errors.password as any)?.message}
           onChange={handleChange}
           InputProps={{
             endAdornment: (

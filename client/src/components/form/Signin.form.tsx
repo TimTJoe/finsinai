@@ -47,7 +47,7 @@ export const SigninForm = () => {
     formState: { errors },
   } = useForm();
 
-  const handleErrors = (errors: any) => {};
+  const handleErrors = (errors: any) => { console.error(errors)};
 
   function handleChange(e: any) {
     setValues({ ...values, [e.target.name]: wodify(e) });
@@ -76,7 +76,6 @@ export const SigninForm = () => {
         throw new Error(error);
       });
     if (dbUser && lodash.isEqual(dbUser, values)) {
-      // alert("Password marched");
       setUser(dbUser);
       setTimeout(() => {
         setLoading(false);
@@ -90,7 +89,7 @@ export const SigninForm = () => {
   return (
     <FormBox
       component={"form"}
-      method="post"
+      // method="post"
       onSubmit={handleSubmit(handleSave, handleErrors)}
     >
       {loading && <LinearProgress />}
@@ -107,7 +106,7 @@ export const SigninForm = () => {
           InputLabelProps={{ shrink: true }}
           {...register("email", Pattern.email)}
           error={Boolean(errors.email)}
-          helperText={errors.email?.message}
+          helperText={(errors.email as any)?.message}
           onChange={handleChange}
         />
         <InputField
@@ -118,7 +117,7 @@ export const SigninForm = () => {
           InputLabelProps={{ shrink: true }}
           {...register("password", Pattern.password)}
           error={Boolean(errors.password)}
-          helperText={errors.password?.message}
+          helperText={(errors.password as any)?.message}
           onChange={handleChange}
           InputProps={{
             endAdornment: (

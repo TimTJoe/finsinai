@@ -1,9 +1,9 @@
 
-[14:50:14.329] src/App.tsx(4,21): error TS2307: Cannot find module '@pages/account' or its corresponding type declarations.
-[14:50:14.329] src/App.tsx(5,20): error TS2307: Cannot find module '@pages/account/Logout' or its corresponding type declarations.
-[14:50:14.329] src/App.tsx(6,23): error TS2307: Cannot find module '@pages/dashboard' or its corresponding type declarations.
-[14:50:14.329] src/App.tsx(7,20): error TS2307: Cannot find module '@pages/income' or its corresponding type declarations.
-[14:50:14.330] src/App.tsx(8,21): error TS2307: Cannot find module '@pages/expense' or its corresponding type declarations.
+[14:50:14.329] src/App.tsx(4,21): error TS2307: Cannot find module '@page/account' or its corresponding type declarations.
+[14:50:14.329] src/App.tsx(5,20): error TS2307: Cannot find module '@page/account/Logout' or its corresponding type declarations.
+[14:50:14.329] src/App.tsx(6,23): error TS2307: Cannot find module '@page/dashboard' or its corresponding type declarations.
+[14:50:14.329] src/App.tsx(7,20): error TS2307: Cannot find module '@page/income' or its corresponding type declarations.
+[14:50:14.330] src/App.tsx(8,21): error TS2307: Cannot find module '@page/expense' or its corresponding type declarations.
 [14:50:14.330] src/components/animations/Slide.tsx(30,7): error TS2322: Type 'Variant' is not assignable to type 'boolean | MakeCustomValueType<TargetProperties> | VariantLabels | undefined'.
 [14:50:14.330]   Type 'TargetAndTransition' is not assignable to type 'boolean | MakeCustomValueType<TargetProperties> | VariantLabels | undefined'.
 [14:50:14.330]     Type 'TargetAndTransition' is not assignable to type 'MakeCustomValueType<TargetProperties>'.
@@ -26,8 +26,8 @@
 [14:50:14.333] src/components/common/custom.fab.tsx(7,1): error TS6133: 'RemoveIcon' is declared but its value is never read.
 [14:50:14.333] src/components/common/custom.fab.tsx(9,1): error TS6133: 'Subline' is declared but its value is never read.
 [14:50:14.333] src/components/common/custom.fab.tsx(35,36): error TS7006: Parameter 'event' implicitly has an 'any' type.
-[14:50:14.333] src/components/common/custom.layout.tsx(7,25): error TS2307: Cannot find module '@pages/expense/expense.form' or its corresponding type declarations.
-[14:50:14.333] src/components/common/custom.layout.tsx(8,24): error TS2307: Cannot find module '@pages/income/income.form' or its corresponding type declarations.
+[14:50:14.333] src/components/common/custom.layout.tsx(7,25): error TS2307: Cannot find module '@page/expense/expense.form' or its corresponding type declarations.
+[14:50:14.333] src/components/common/custom.layout.tsx(8,24): error TS2307: Cannot find module '@page/income/income.form' or its corresponding type declarations.
 [14:50:14.333] src/components/common/custom.layout.tsx(39,48): error TS2322: Type 'string' is not assignable to type '"permanent" | "persistent" | "temporary" | undefined'.
 [14:50:14.333] src/components/common/custom.snackbar.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
 [14:50:14.333] src/components/form/Signin.form.tsx(50,25): error TS6133: 'errors' is declared but its value is never read.

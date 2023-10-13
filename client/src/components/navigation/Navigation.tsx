@@ -1,15 +1,12 @@
 import React from "react";
 import {
   RxAvatar,
-  RxBell,
   RxHamburgerMenu,
-  RxMagnifyingGlass,
 } from "react-icons/rx";
-import { Avatar, Box, Button, IconButton, Link } from "@mui/material";
+import { Box, Button, IconButton } from "@mui/material";
 import { AppBarProps } from "@mui/material/AppBar";
 import { AppBar, Toolbar, ToolbarIcons } from "@components/styled/nav.styled";
 import { SquardLogo } from "@components/common/Logo";
-import { MdPeople } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 interface IAppBar extends AppBarProps {

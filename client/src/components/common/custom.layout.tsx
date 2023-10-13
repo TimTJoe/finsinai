@@ -4,18 +4,19 @@ import Navigation from "@components/navigation/Navigation";
 import { LayoutBody, LayoutContent } from "@components/styled/layout.styled";
 import Slide from "@components/animations/Slide";
 import Drawer from "@components/navigation/Drawer";
-import ExpenseForm from "@pages/expense/expense.form";
-import IncomeForm from "@pages/income/income.form";
+import ExpenseForm from "../../pages/expense/expense.form";
+import IncomeForm from "../../pages/income/income.form";
 
 interface ILayout {
   children: React.ReactNode;
 }
 
+
 export const CustomLayout: React.FC<ILayout> = ({ children }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [open, setOpen] = useState(!isSmallScreen);
-  const [variant, setVariant] = useState(
+  const [variant, setVariant] = useState<any | undefined>(
     isSmallScreen ? "temporary" : "permanent"
   );
 
@@ -32,6 +33,8 @@ export const CustomLayout: React.FC<ILayout> = ({ children }) => {
       }
     }
   };
+
+
 
   return (
     <LayoutBody>

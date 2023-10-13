@@ -1,12 +1,9 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback, SetStateAction } from "react";
 import Fab from "@mui/material/Fab";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
-import styled from "@emotion/styled"; // Import styled from @emotion/styled
-import { Subline } from "@components/styled/typography.styled";
+import styled from "@emotion/styled"; 
 import { Divider } from "@mui/material";
 import { CloseOutlined } from "@mui/icons-material";
 import { useIncome } from "@components/providers/ProvideIncome";
@@ -32,7 +29,7 @@ function CustomFab() {
   const { openIncomeForm } = useIncome();
   const { openExpenseForm } = useExpense();
 
-  const handleClick = useCallback((event) => {
+  const handleClick = useCallback((event: { currentTarget: SetStateAction<null>; }) => {
     setAnchorEl(event.currentTarget);
   }, []);
 

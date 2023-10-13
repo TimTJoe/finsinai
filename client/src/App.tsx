@@ -1,7 +1,7 @@
 import "@css/root.css";
 import "@css/index.css";
 import { Route, Routes } from "react-router-dom";
-// import Account from "@pages/account";
+// import Account from "@page/account";
 import Logout from "./pages/account/Logout";
 import Dashboard from "./pages/dashboard";
 import Income from "./pages/income";

@@ -1,7 +1,7 @@
 import React from "react";
 import { IconButton, Typography, Avatar } from "@mui/material";
 import { MdMoreVert } from "react-icons/md";
-import { MenuContainer, MenuItem } from "./styled/menu.styled";
+import { MenuContainer, MenuItem } from "@components/styled/menu.styled";
 
 type TMenu = {
   icon: "menu" | "avatar";
@@ -50,7 +50,7 @@ export const Menu = ({ icon, menuitems }: TMenu) => {
         open={Boolean(anchor)}
         onClose={handleClose}
       >
-        {menuitems.map((item, index) => (
+        {menuitems.map((item:any, index) => (
           <MenuItem
             component="a"
             href={`/${item?.url}`}

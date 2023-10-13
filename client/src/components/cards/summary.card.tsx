@@ -2,13 +2,10 @@ import Box from "@mui/material/Box";
 import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
 import { Typography } from "@mui/material";
-import { blue, red, green } from "@mui/material/colors";
+import { blue, red} from "@mui/material/colors";
 import CustomBox from "@components/common/custom.box";
 import CustomSpan from "@components/common/custom.span";
 import lodash from "lodash";
-import { useIncome } from "@components/providers/ProvideIncome";
-import { useExpense } from "@components/providers/ProvideExpense";
-import { useLocation } from "react-router-dom";
 
 export const SummaryCardFlexbox = styled(Box)`
   display: flex;
