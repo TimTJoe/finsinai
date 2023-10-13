@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useMemo } from "react";
+import React, { createContext, useContext } from "react";
 import Localbase from "localbase";
 const database = new Localbase("finsinai");
 

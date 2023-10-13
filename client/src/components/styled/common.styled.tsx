@@ -1,18 +1,5 @@
 import { Box, BoxProps, Button as MuiButton } from "@mui/material";
 import styled from "@emotion/styled";
-import { blueGrey } from "@mui/material/colors";
-
-// export const BODY = styled(Box)`
-//   display: flex;
-// `;
-// export const CONTENT = styled(Box)`
-//   flex-grow: 1;
-//   padding: 16px;
-//   min-height: 96vh;
-//   overflow: hidden;
-//   background-color: ${blueGrey[100]};
-//   color: black;
-// `;
 
 export const FLEXCOL = styled(Box)`
   display: flex;

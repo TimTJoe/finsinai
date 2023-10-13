@@ -2,7 +2,6 @@ import { useState } from "react";
 import { MdClose, MdSearch } from "react-icons/md";
 import { InputAdornment, IconButton } from "@mui/material";
 import {
-  SearchDialog,
   SearchHeader,
   IconWrap,
   SearchInput,
@@ -15,14 +14,6 @@ export const SearchEngine = () => {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
-
-  const [values, setValues] = useState({
-    query: "",
-  });
-
-  function handleChange(e) {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  }
 
   return (
     <>
@@ -47,7 +38,7 @@ export const SearchEngine = () => {
           </IconButton>
         </SearchHeader>
         <SearchContent>
-          <SearchResult component="a" href="/akalakd" color={"primary"}>
+          <SearchResult>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </SearchResult>
         </SearchContent>

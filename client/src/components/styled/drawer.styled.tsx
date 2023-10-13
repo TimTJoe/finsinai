@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import styled from "@emotion/styled";
-import { blue, blueGrey, grey } from "@mui/material/colors";
+import { blueGrey, grey } from "@mui/material/colors";
 
 export const CustomDrawer = styled(MuiDrawer)`
   width: 240px;

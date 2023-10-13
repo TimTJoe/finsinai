@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Box, Button, Input } from "@mui/material";
 import { MdAddAPhoto } from "react-icons/md";
 import { Block, BlockBox, EditPicture, Form, Media, MediaBlock } from "@components/styled/account.styled";
@@ -25,7 +25,7 @@ export const AccountSettings = () => {
   };
 
   const handleEditPicture = () => {
-    picInput.current.click();
+    (picInput.current as any)?.click();
   };
 
   return (

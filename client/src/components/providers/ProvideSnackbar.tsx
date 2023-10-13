@@ -1,7 +1,6 @@
 import Snackbar from "@components/common/custom.snackbar";
 import { Button } from "@mui/material";
 import { createContext, useContext, useState } from "react";
-import { MdClose } from "react-icons/md";
 
 interface IProvideSnackbar {
   children: React.ReactNode;

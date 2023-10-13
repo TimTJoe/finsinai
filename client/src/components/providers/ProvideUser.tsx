@@ -7,7 +7,6 @@ import React, {
 } from "react";
 import { useDatabase } from "./ProvideDB";
 import { useSnackbar } from "./ProvideSnackbar";
-import lodash from "lodash";
 
 interface IProvideUser {
   children: React.ReactNode;

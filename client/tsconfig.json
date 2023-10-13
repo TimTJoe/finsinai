@@ -28,7 +28,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "../search"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "typeRoots": ["node_modules/@types", "src/@types"]
 }
