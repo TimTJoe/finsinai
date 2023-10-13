@@ -25,7 +25,6 @@ export const ExpenseForm: React.FC = () => {
   });
 
   const {
-    setError,
     register,
     handleSubmit,
     formState: { errors },
@@ -48,6 +47,7 @@ export const ExpenseForm: React.FC = () => {
       .then((data: any) => {
         handleIsUpdated();
         openSnackbar("Expense transaction added");
+        console.log(data)
       })
       .catch((error: string | undefined) => {
         throw new Error(error);
@@ -71,7 +71,7 @@ export const ExpenseForm: React.FC = () => {
           value={values.title}
           {...register("title", Pattern.title)}
           error={Boolean(errors.title)}
-          helperText={errors.title?.message}
+          helperText={(errors.title as any)?.message}
           onChange={handleChange}
           required
         />
@@ -85,7 +85,7 @@ export const ExpenseForm: React.FC = () => {
             value={values.lrd}
             {...register("lrd", Pattern.lrd)}
             error={Boolean(errors.lrd)}
-            helperText={errors.lrd?.message}
+            helperText={(errors.lrd as any)?.message}
             onChange={handleChange}
             required
           />
@@ -98,7 +98,7 @@ export const ExpenseForm: React.FC = () => {
             value={values.usd}
             {...register("usd", Pattern.usd)}
             error={Boolean(errors.usd)}
-            helperText={errors.usd?.message}
+            helperText={(errors.usd as any)?.message}
             onChange={handleChange}
             required
           />

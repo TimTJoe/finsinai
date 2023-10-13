@@ -6,7 +6,7 @@ import { Block, BlockBox, EditPicture, Form, Media, MediaBlock } from "@componen
 export const AccountSettings = () => {
   const [show, setShow] = useState(false);
   const [picPath, setPicPath] = useState("egg.jpg");
-  const picInput = useRef("pic");
+  const picInput = useRef<HTMLInputElement>(null);
 
   const [values, setValues] = useState({
     fullname: "Timothy T. Joe",

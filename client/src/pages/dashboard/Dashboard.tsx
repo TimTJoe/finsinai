@@ -2,7 +2,7 @@ import CustomFab from "@components/common/custom.fab";
 import CustomLayout from "@components/common/custom.layout";
 import { Grid, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { XBox } from "@components/styled/common.styled";
 import { Transaction } from "@components/transaction";
 import { useIncome } from "@components/providers/ProvideIncome";
@@ -31,8 +31,9 @@ export const Dashboard = () => {
   const { allIncomes, topIncomes, deleteIncome, totalIncome } = useIncome();
   const { allExpenses, topExpenses, totalExpense, deleteExpense } =
     useExpense();
-  const handleOptionChange = (event, newOption) => {
+  const handleOptionChange = (event: any, newOption: SetStateAction<string>) => {
     setSelectedOption(newOption);
+    console.log(event)
   };
 
   const data = {
