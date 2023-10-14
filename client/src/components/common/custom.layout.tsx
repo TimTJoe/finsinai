@@ -39,7 +39,7 @@ export const CustomLayout: React.FC<ILayout> = ({ children }) => {
   return (
     <LayoutBody>
       <Navigation openDrawer={openDrawer} open={open} position="fixed" />
-      <Drawer open={open} onClose={openDrawer} variant={variant} />
+      <Drawer open={open} openDrawer={openDrawer} onClose={openDrawer} variant={variant} />
       <LayoutContent component="main">
         <Slide direction="left">
           <Toolbar variant="dense" />

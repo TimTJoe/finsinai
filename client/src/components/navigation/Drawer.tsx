@@ -14,7 +14,7 @@ import DrawerItems from "./drawer.items";
 import { useNavigate } from "react-router-dom";
 
 interface IDrawer extends DrawerProps {
-  openDrawer?: () => void;
+  openDrawer: () => void;
   open: boolean;
 }
 
@@ -29,6 +29,8 @@ export const Drawer: React.FC<IDrawer> = ({ openDrawer, open, ...rest }) => {
             <Item
               key={index}
               onClick={() => {
+                
+                openDrawer();
                 goto(`${item.link}`);
               }}
             >
