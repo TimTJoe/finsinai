@@ -11,6 +11,7 @@ import {
   CustomDrawer as Sidebar,
 } from "@components/styled/drawer.styled";
 import DrawerItems from "./drawer.items";
+import { useNavigate } from "react-router-dom";
 
 interface IDrawer extends DrawerProps {
   openDrawer?: () => void;
@@ -18,6 +19,7 @@ interface IDrawer extends DrawerProps {
 }
 
 export const Drawer: React.FC<IDrawer> = ({ openDrawer, open, ...rest }) => {
+  const goto = useNavigate();
   return (
     <Sidebar anchor="left" open={open} onClose={openDrawer} {...rest}>
       <Toolbar variant="dense" />
@@ -26,9 +28,9 @@ export const Drawer: React.FC<IDrawer> = ({ openDrawer, open, ...rest }) => {
           {DrawerItems.map((item, index) => (
             <Item
               key={index}
-              component="a"
-              href={item.link}
-              onClick={openDrawer}
+              onClick={() => {
+                goto(`${item.link}`);
+              }}
             >
               <ItemIcon>{item.icon}</ItemIcon>
               <ItemText primary={item.text} />
