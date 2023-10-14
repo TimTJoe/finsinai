@@ -17,9 +17,9 @@ const NoMatch = () => {
   return (
     <Content>
       <Container>
-        <Typography variant="body1">{location.pathname}</Typography>
+        <Typography variant="body1">404 error {location.pathname}</Typography>
         <Typography variant="h4" m={2}>
-          404 Not Found!
+          Not Found!
         </Typography>
         <Button href="/" variant="contained">
           Go Home

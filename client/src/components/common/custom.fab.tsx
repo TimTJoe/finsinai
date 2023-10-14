@@ -1,4 +1,4 @@
-import { useState, useCallback, SetStateAction } from "react";
+import { useState, useCallback } from "react";
 import Fab from "@mui/material/Fab";
 import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
@@ -29,7 +29,7 @@ function CustomFab() {
   const { openIncomeForm } = useIncome();
   const { openExpenseForm } = useExpense();
 
-  const handleClick = useCallback((event: { currentTarget: SetStateAction<null>; }) => {
+  const handleClick = useCallback((event: any) => {
     setAnchorEl(event.currentTarget);
   }, []);
 

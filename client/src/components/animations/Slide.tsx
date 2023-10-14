@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, Variant } from "framer-motion";
+import { motion} from "framer-motion";
 
 interface SlideProps {
   children: React.ReactNode;
@@ -13,13 +13,13 @@ interface SlideProps {
  * @returns {React.ReactNode} The animated content.
  */
 function Slide({ children, direction }: SlideProps): React.ReactNode {
-  const initialVariants: Record<string, Variant> = {
+  const initialVariants = {
     right: { x: 30, opacity: 0 },
     left: { x: -30, opacity: 0 },
     up: { y: 30, opacity: 0 },
   };
 
-  const animateVariants: Record<string, Variant> = {
+  const animateVariants =  {
     right: { x: 0, opacity: 1 },
     left: { x: 0, opacity: 1 },
     up: { y: 0, opacity: 1 },

@@ -2,23 +2,16 @@ import React from "react";
 import { IconButton, Typography, Avatar } from "@mui/material";
 import { MdMoreVert } from "react-icons/md";
 import { MenuContainer, MenuItem } from "@components/styled/menu.styled";
+import { useNavigate } from "react-router-dom";
 
 type TMenu = {
   icon: "menu" | "avatar";
   menuitems: {}[];
 };
 
-/**
- * Customized MUI Menu react component
- * with icons and menu list populated through props
- *
- * @props String - name of toggler either icon or avatar
- * @returns Customized MUI Menu react Component
- *
- */
 export const Menu = ({ icon, menuitems }: TMenu) => {
   const [anchor, setAnchor] = React.useState<null | HTMLElement>(null);
-
+  const goto = useNavigate();
   let _icon = { avatar: <Avatar />, menu: <MdMoreVert /> }[icon];
 
   const handleOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -50,12 +43,13 @@ export const Menu = ({ icon, menuitems }: TMenu) => {
         open={Boolean(anchor)}
         onClose={handleClose}
       >
-        {menuitems.map((item:any, index) => (
+        {menuitems.map((item: any, index) => (
           <MenuItem
-            component="a"
-            href={`/${item?.url}`}
             key={index}
-            onClick={handleClose}
+            onClick={() => {
+              handleClose();
+              goto(`/${item?.url}`);
+            }}
           >
             <Typography textAlign="center">{item.label}</Typography>
           </MenuItem>

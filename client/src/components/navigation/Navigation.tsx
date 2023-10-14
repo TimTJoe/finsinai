@@ -28,7 +28,7 @@ const Navigation: React.FC<IAppBar> = ({ openDrawer, open, ...rest }) => {
         >
           <RxHamburgerMenu />
         </IconButton>
-        <Box component={"a"} href="/">
+        <Box onClick={() => goto("/")}>
           {<SquardLogo />}
         </Box>
         <ToolbarIcons>
