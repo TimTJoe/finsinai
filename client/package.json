@@ -13,7 +13,6 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.3",
-    "@mui/lab": "^5.0.0-alpha.140",
     "@mui/material": "^5.14.2",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
@@ -26,7 +25,6 @@
     "react-hook-form": "^7.45.4",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
-    "vite-plugin-commonjs": "^0.10.0",
     "vite-plugin-require": "^1.1.11",
     "vite-plugin-require-transform": "^1.0.21"
   },

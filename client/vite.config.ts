@@ -4,9 +4,14 @@ import path from "path";
 import requireTransform from "vite-plugin-require-transform";
 import vitePluginRequire from "vite-plugin-require";
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), requireTransform({}), vitePluginRequire(),],
+  plugins: [
+    react(),
+    requireTransform({}),
+    vitePluginRequire({ fileRegex: /(.jsx?|.tsx?|.vue)$/ }),
+  ],
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "src") },
