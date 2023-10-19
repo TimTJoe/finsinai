@@ -27,6 +27,7 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
     "vite-plugin-commonjs": "^0.10.0",
+    "vite-plugin-require": "^1.1.11",
     "vite-plugin-require-transform": "^1.0.21"
   },
   "devDependencies": {
