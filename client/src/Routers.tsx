@@ -12,7 +12,7 @@ export const Routers = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "account",
+    path: "/account",
     element: <Account />,
     children: [
       {
