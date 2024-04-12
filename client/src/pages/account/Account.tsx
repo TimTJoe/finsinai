@@ -17,7 +17,6 @@ const Account = () => {
         setViewType("signup");
       }
     }
-    console.log(params);
   }, [params]);
 
   const view = {

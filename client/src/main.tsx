@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
+import { Outlet, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 import { CustomTheme } from "@components/theme.ts";
 import { ProvideForm } from "@components/providers/ProvideForm";
@@ -19,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <ProvideIncome>
               <ProvideForm>
                 <RouterProvider router={Routers} />
+                <Outlet />
               </ProvideForm>
             </ProvideIncome>
           </ProvideExpense>
