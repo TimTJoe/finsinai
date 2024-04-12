@@ -11,7 +11,7 @@ import NoMatch from "@components/NoMatch";
 function App() {
   return (
     <Routes>
-      <Route path="/account">
+      <Route path="account">
         <Route index element={<Account />} />
         <Route path=":params" element={<Account />} />
         <Route path="logout" element={<Logout />} />
