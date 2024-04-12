@@ -1,0 +1,10 @@
+diff --git a/node_modules/localbase/localbase/api/actions/add.js b/node_modules/localbase/localbase/api/actions/add.js
+index 16439db..a420d14 100644
+--- a/node_modules/localbase/localbase/api/actions/add.js
++++ b/node_modules/localbase/localbase/api/actions/add.js
+@@ -1,4 +1,4 @@
+-let UUID = require('ordered-uuid')
++import UUID from 'ordered-uuid'
+ import success from '../../api-utils/success'
+ import error from '../../api-utils/error'
+ import showUserErrors from '../../api-utils/showUserErrors'
