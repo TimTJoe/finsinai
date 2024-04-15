@@ -10,6 +10,7 @@ export const Routers = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />,
+    errorElement: <NoMatch />,
   },
   {
     path: "/account",

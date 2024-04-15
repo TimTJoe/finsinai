@@ -4,7 +4,6 @@ import SigninView from "./views/Signin.view";
 import SignupView from "./views/Signup.view";
 import AccountView from "./views/account.view";
 import Slide from "@components/animations/Slide";
-import { Outlet, RouterProvider } from "react-router-dom";
 
 const Account = () => {
   let { params } = useParams();
@@ -31,7 +30,6 @@ const Account = () => {
       <Slide direction="left">
         <div>{view}</div>
       </Slide>
-      <Outlet />
     </>
   );
 };
