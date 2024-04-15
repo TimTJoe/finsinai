@@ -5,6 +5,7 @@ import Income from "./pages/income";
 import Expense from "./pages/expense";
 import Account from "./pages/account";
 import NoMatch from "@components/NoMatch";
+import SignupView from "./pages/account/views/Signup.view";
 
 export const Routers = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const Routers = createBrowserRouter([
     ],
   },
   {
+    path: "/account/signup",
+    element: <SignupView />,
+  },
+  {
     path: "income",
     element: <Income />,
   },
@@ -34,6 +39,7 @@ export const Routers = createBrowserRouter([
     path: "expense",
     element: <Expense />,
   },
+
   {
     path: "*",
     element: <NoMatch />,
