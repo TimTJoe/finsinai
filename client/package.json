@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@fluentui/react": "^8.118.6",
+    "@fluentui/react-components": "^9.53.0",
     "@fluentui/react-icons": "^2.0.242",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.5",
     "react-router-dom": "^6.23.1",
+    "rxdb": "^15.23.0",
+    "rxjs": "^7.8.1",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {

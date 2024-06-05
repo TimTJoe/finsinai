@@ -9,6 +9,8 @@
     "paths": {
       "@/*": ["src/"],
       "@pages/*": ["src/pages/"],
+      "@providers/*": ["src/providers/"],
+      "@components/*": ["src/components/"]
     },
 
     /* Bundler mode */
